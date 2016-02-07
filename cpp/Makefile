@@ -6,6 +6,7 @@ CC=g++
 DEL=rm -rf
 MKDIR=mkdir -p
 
+INCLUDE_DIR=-Isrc -Itests
 LINK_FLAGS=-g
 OUTPUT=-o
 
@@ -30,14 +31,14 @@ $(OBJ_DIR):
 $(PROJECT): $(OBJECTS)
 	$(CC) $(LINK_FLAGS) $(OBJECTS) $(OUTPUT) $(PROJECT)
 
-$(OBJ_DIR)/main.o: main.cpp
-	$(CC) $(CFLAGS) main.cpp $(OUTPUT) $(OBJ_DIR)/main.o
+$(OBJ_DIR)/main.o: src/main.cpp
+	$(CC) $(CFLAGS) $(INCLUDE_DIR) src/main.cpp $(OUTPUT) $(OBJ_DIR)/main.o
 
-$(OBJ_DIR)/hexdump.o: hexdump.cpp hexdump.h
-	$(CC) $(CFLAGS) hexdump.cpp $(OUTPUT) $(OBJ_DIR)/hexdump.o
+$(OBJ_DIR)/hexdump.o: src/hexdump.cpp src/hexdump.h
+	$(CC) $(CFLAGS) $(INCLUDE_DIR) src/hexdump.cpp $(OUTPUT) $(OBJ_DIR)/hexdump.o
 
-$(OBJ_DIR)/hexdump_tests.o: hexdump_tests.cpp hexdump_tests.h hexdump.h
-	$(CC) $(CFLAGS) hexdump_tests.cpp $(OUTPUT) $(OBJ_DIR)/hexdump_tests.o
+$(OBJ_DIR)/hexdump_tests.o: tests/hexdump_tests.cpp tests/hexdump_tests.h src/hexdump.h
+	$(CC) $(CFLAGS) $(INCLUDE_DIR) tests/hexdump_tests.cpp $(OUTPUT) $(OBJ_DIR)/hexdump_tests.o
 
 clean:
 	$(DEL) $(OBJ_DIR)
