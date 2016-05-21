@@ -1,11 +1,11 @@
 PROJECT=test
 
-CC=gcc
-CPP=g++
+CC?=gcc
+CPP?=g++
 MKDIR=mkdir -p
 DEL=rm -rf
 
-CFLAGS=-c -g -W -Wall
+CFLAGS?=-c -g -W -Wall
 LINK_FLAGS=-g
 
 OBJ_DIR=obj
