@@ -1,0 +1,45 @@
+- Environment variable  (-Dname=value)
+- Java Bean
+- pojo
+- java.io.Serializable
+- equals and hashcode
+- Reflection
+- Regex
+- Parse XML
+- Parse JSON
+- Maven single jar with dependencies
+- Packages
+- Classpath
+- WebSockets
+- Jetty - opening a web app
+- JSON RPC
+- Apache HTTP Client
+- Junit paralel tests
+- Lombok
+- Log4j
+- Servlets
+    + Structure of a servlet
+    + Reading parameters from web.xml
+    + Filters
+    + JSP
+    + Launching an independent thread with ServletContextListener
+    + deployment from Maven
+- Thread synchronization
+- IPC
+    + Sockets
+    + Shared Memory
+    + Semaphores
+    + Pipes
+- Hibernate select/insert
+- Liquibase
+- Spring core
+    + Constructor injection
+    + Setter
+- Redis
+- Spring MVC
+- RabbitMQ
+- Kafka
+- JavaFX (...)
+- Java EE (...)
+- Connect to MongoDB
+- Quartz scheduler example
