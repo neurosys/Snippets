@@ -8,6 +8,11 @@
 - Parse XML
 - Parse JSON
 - Maven single jar with dependencies
+- Run unit tests from maven
+- Deploy to Tomcat from Eclipse
+- Obtain code coverage Intellij/Eclipse
+- Monitor performance of application (leaks, threads, memory, cpu, sockets)
+- Scan application with SonarLint / SonarQube
 - Packages
 - Classpath
 - WebSockets
@@ -17,6 +22,7 @@
 - Junit paralel tests
 - Lombok
 - Log4j
+- Java 8 Streams
 - Servlets
     + Structure of a servlet
     + Reading parameters from web.xml
@@ -43,3 +49,9 @@
 - Java EE (...)
 - Connect to MongoDB
 - Quartz scheduler example
+- Performance optimization
+- Obfuscate
+- javadoc syntax and documentation generation
+- JNI
+- Mockito
+- PowerMock
