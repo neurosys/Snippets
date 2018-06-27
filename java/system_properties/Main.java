@@ -32,6 +32,9 @@ public class Main {
         // Let's see if reading it consumes it
         showProperty("bibi"); // nope, it doesn't ;-)
 
+        System.out.println("Remove property 'bibi'");
+        System.clearProperty("bibi");
+        showProperty("bibi"); // should display null
 
         // Let's see if we can set properties from inside the jvm
         setProperty("bibileanu", "bibilescu");
@@ -39,6 +42,6 @@ public class Main {
 
         System.out.println("====================");
         // Let's print all the properties in the jvm (they can also be set, but it can be risky)
-        printSystemProperties();
+        //printSystemProperties(); // this has an very long output
     }
 }
