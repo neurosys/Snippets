@@ -1,4 +1,3 @@
-- Environment variable  (-Dname=value)
 - Java Bean
 - pojo
 - java.io.Serializable
