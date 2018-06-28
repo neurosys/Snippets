@@ -4,7 +4,7 @@
     <groupId>org.bibileanu.learning</groupId>
     <artifactId>pgconnect</artifactId>
     <packaging>jar</packaging>
-    <version>1.0-SNAPSHOT</version>
+    <version>2.0-SNAPSHOT</version>
     <name>pgconnect</name>
     <url>http://maven.apache.org</url>
 
@@ -43,14 +43,39 @@
                 <version>${maven.jar.plugin.version}</version>
 				<configuration>
 					<archive>
+                        <index>true</index>
 						<manifest>
 							<addClasspath>true</addClasspath>
 							<classpathPrefix>libs/</classpathPrefix>
                             <mainClass>org.bibileanu.learning.dbconnection.App</mainClass>
+
+                            <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+                            <addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
+
 						</manifest>
-					</archive>
-				</configuration>
-			</plugin>
+                        <manifestEntries>
+                            <key>value</key>
+                        </manifestEntries>
+                        <manifestEntries>
+                            <mykey>myvalue</mykey>
+                        </manifestEntries>
+                        <manifestEntries>
+                            <myke2y>myvalue</myke2y>
+                        </manifestEntries>
+                        <manifestSections>
+                            <manifestSection>
+                                <name>nameOfTheSection</name>
+                                <manifestEntries>
+                                    <anotherKey>anotherValue</anotherKey>
+                                </manifestEntries>
+                                <manifestEntries>
+                                    <anotherNewKey>anotherValue</anotherNewKey>
+                                </manifestEntries>
+                            </manifestSection>
+                        </manifestSections>
+                    </archive>
+                </configuration>
+            </plugin>
 
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
