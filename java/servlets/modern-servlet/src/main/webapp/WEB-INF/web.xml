@@ -37,11 +37,28 @@
         </init-param>
     </servlet>
 
-
     <servlet>
         <servlet-name>DemoHeaders</servlet-name>
         <servlet-class>org.bibileanu.servlets.DemoHeaders</servlet-class>
     </servlet>
+
+    <servlet>
+        <servlet-name>DemoRedirect</servlet-name>
+        <servlet-class>org.bibileanu.servlets.DemoRedirect</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>DemoGetParams</servlet-name>
+        <servlet-class>org.bibileanu.servlets.DemoGetParams</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>DemoPostParams</servlet-name>
+        <servlet-class>org.bibileanu.servlets.DemoPostParams</servlet-class>
+    </servlet>
+
+
+
 
     <servlet-mapping>
         <servlet-name>Demo</servlet-name>
@@ -56,6 +73,16 @@
     <servlet-mapping>
         <servlet-name>DemoHeaders</servlet-name>
         <url-pattern>/demoheaders</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>DemoGetParams</servlet-name>
+        <url-pattern>/demogetparams</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>DemoPostParams</servlet-name>
+        <url-pattern>/demopostparams</url-pattern>
     </servlet-mapping>
 
 </web-app>
