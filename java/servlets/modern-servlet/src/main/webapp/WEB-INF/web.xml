@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+    http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+    version="3.1"
+    metadata-complete="true">
+
+      <display-name>Welcome to Tomcat</display-name>
+      <description>
+          Welcome to Tomcat
+      </description>
+
+      <context-param>
+          <param-name>log4jConfigLocation</param-name>
+          <param-value>file:///${zoomsim.config.path}/log4j.xml</param-value>
+      </context-param>
+
+      <servlet>
+          <servlet-name>Demo</servlet-name>
+          <servlet-class>org.bibileanu.servlets.DemoServlet</servlet-class>
+      </servlet>
+
+      <servlet-mapping>
+          <servlet-name>Demo</servlet-name>
+          <url-pattern>/demo</url-pattern>
+      </servlet-mapping>
+
+  </web-app>
