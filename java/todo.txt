@@ -28,12 +28,9 @@
 - Log4j
 - Java 8 Streams
 - Servlets
-    + Structure of a servlet
-    + Reading parameters from web.xml
     + Filters
     + JSP
     + Launching an independent thread with ServletContextListener
-    + deployment from Maven
 - Thread synchronization
 - IPC
     + Sockets

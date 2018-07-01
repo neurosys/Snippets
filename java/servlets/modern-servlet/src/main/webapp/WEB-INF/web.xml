@@ -6,24 +6,56 @@
     version="3.1"
     metadata-complete="true">
 
-      <display-name>Welcome to Tomcat</display-name>
-      <description>
-          Welcome to Tomcat
-      </description>
+    <!-- 
+    <icon>
+        <small-icon>image/iconSmall.gif</small-icon>
+    </icon>
+    -->
 
-      <context-param>
-          <param-name>log4jConfigLocation</param-name>
-          <param-value>file:///${zoomsim.config.path}/log4j.xml</param-value>
-      </context-param>
 
-      <servlet>
-          <servlet-name>Demo</servlet-name>
-          <servlet-class>org.bibileanu.servlets.DemoServlet</servlet-class>
-      </servlet>
+    <display-name>Welcome to Tomcat</display-name>
+    <description>
+        Welcome to Tomcat
+    </description>
 
-      <servlet-mapping>
-          <servlet-name>Demo</servlet-name>
-          <url-pattern>/demo</url-pattern>
-      </servlet-mapping>
+    <context-param>
+        <param-name>log4jConfigLocation</param-name>
+        <param-value>file:///${config.path}/log4j.xml</param-value>
+    </context-param>
 
-  </web-app>
+    <servlet>
+        <servlet-name>Demo</servlet-name>
+        <servlet-class>org.bibileanu.servlets.DemoServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>DemoConfig</servlet-name>
+        <servlet-class>org.bibileanu.servlets.DemoConfig</servlet-class>
+        <init-param>
+            <param-name>myParamName</param-name>
+            <param-value>myParamValue</param-value>
+        </init-param>
+    </servlet>
+
+
+    <servlet>
+        <servlet-name>DemoHeaders</servlet-name>
+        <servlet-class>org.bibileanu.servlets.DemoHeaders</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Demo</servlet-name>
+        <url-pattern>/demo</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>DemoConfig</servlet-name>
+        <url-pattern>/democonfig</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>DemoHeaders</servlet-name>
+        <url-pattern>/demoheaders</url-pattern>
+    </servlet-mapping>
+
+</web-app>
