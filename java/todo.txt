@@ -1,6 +1,4 @@
-- Enum
 - Time
-    + Parse the toString() from the reverse of the LocalDateTime
     + Do date operations (timedeltas)
 - Java Bean
 - pojo
