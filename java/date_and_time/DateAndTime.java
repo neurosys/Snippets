@@ -26,16 +26,29 @@ public class DateAndTime {
 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd_kk-mm-ss:SSS");
 		System.out.println("Printed with my format: " + localDateTime.format(formatter));
 	}
+	
+	public static void parseDefaultTimestampFormat() {
+		System.out.println("-------------------------------------------");
+		System.out.println("Parse the default format of LocalDateTime");
+		
+		LocalDateTime ldt = LocalDateTime.now();
+		String timeString = ldt.toString();
+		System.out.println("> " + timeString);
 
-    public static void parseTimestamp() {
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'kk:mm:ss.SSS");
+		LocalDateTime newldt = LocalDateTime.parse(timeString, formatter);
+		System.out.println("< " + newldt);
+	}
+
+	public static void main(String[] args) {
+		printDateAndTime();
+		
 		String myTimestamp = "2018-06-30_11-30-24:443";
 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd_kk-mm-ss:SSS");
 		LocalDateTime ldt = LocalDateTime.parse(myTimestamp, formatter);
 		System.out.println("Parsed timestamp = " + ldt.toString());
-    }
-	public static void main(String[] args) {
-		printDateAndTime();
-        parseTimestamp();
+		
+		parseDefaultTimestampFormat();
 	}
 
 }
