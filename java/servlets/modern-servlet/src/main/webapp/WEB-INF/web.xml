@@ -102,4 +102,9 @@
         <url-pattern>/demoattr</url-pattern>
     </servlet-mapping>
 
+    <servlet-mapping>
+        <servlet-name>DemoRedirect</servlet-name>
+        <url-pattern>/demoredirect</url-pattern>
+    </servlet-mapping>
+
 </web-app>
