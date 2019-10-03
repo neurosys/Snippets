@@ -2,14 +2,18 @@
     <head><title>test</title></head>
 	<body>
 		<form>
-			<label>Destination:</label><input id="wsDestination" type="text" value="ws://localhost:9090/bibi"><br>
-			<label>Message:</label><input id="message" type="text"><br>
+			<label>Destination:</label><input id="wsDestination" type="text" size="50" value="ws://localhost:9090/bibi">
 			<input onclick="newWebSocket();" value="Connect" type="button">
-			<input onclick="wsSendMessage();" value="Send" type="button">
 			<input onclick="wsCloseConnection();" value="Disconnect" type="button">
+            <br>
+            <br>
+            <label>Message:</label><br>
+            <textarea id="message" rows="20" cols="180"></textarea><br>
+			<input onclick="wsSendMessage();" value="Send" type="button">
 		</form>
 
-		<textarea id="echoText" rows="5" cols="30"></textarea>
+        <label>Received:</label><br>
+		<textarea id="echoText" rows="30" cols="180"></textarea>
 
 	<script>
 		var echoText = document.getElementById("echoText");
@@ -50,7 +54,7 @@
 		function wsSendMessage(){
 			webSocket.send(message.value);
 			echoText.value += "Message sended to the server : " + message.value + "\n";
-			message.value = "";
+			//message.value = "";
 		}
 		function wsCloseConnection(){
 			webSocket.close();
