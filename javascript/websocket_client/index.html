@@ -3,6 +3,9 @@
 	<body>
 		<form>
 			<label>Destination:</label><input id="wsDestination" type="text" size="50" value="ws://localhost:9090/bibi">
+			<br>
+            <label>Command to send:<br></label>
+            <textarea id="message" rows="20" cols="190" type="text"></textarea><br>
 			<input onclick="newWebSocket();" value="Connect" type="button">
 			<input onclick="wsCloseConnection();" value="Disconnect" type="button">
             <br>
@@ -10,10 +13,12 @@
             <label>Message:</label><br>
             <textarea id="message" rows="20" cols="180"></textarea><br>
 			<input onclick="wsSendMessage();" value="Send" type="button">
-		</form>
 
-        <label>Received:</label><br>
-		<textarea id="echoText" rows="30" cols="180"></textarea>
+            <label>Received:</label><br>
+            <textarea id="echoText" rows="20" cols="180"></textarea>
+            <br>
+            <input onclick="wsClear();" value="Clear" type="button">
+		</form>
 
 	<script>
 		var echoText = document.getElementById("echoText");
@@ -69,6 +74,10 @@
 		function wsError(message){
 			echoText.value += "Error ... \n";
 		}
+
+        function wsClear() {
+            echoText.value = "";
+        }
 	</script>
 
 
