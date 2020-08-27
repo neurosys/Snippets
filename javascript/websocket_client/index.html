@@ -4,15 +4,17 @@
 		<form>
 			<label>Destination:</label><input id="wsDestination" type="text" size="50" value="ws://localhost:9090/bibi">
 			<br>
-            <label>Command to send:<br></label>
-            <textarea id="message" rows="20" cols="190" type="text"></textarea><br>
 			<input onclick="newWebSocket();" value="Connect" type="button">
 			<input onclick="wsCloseConnection();" value="Disconnect" type="button">
             <br>
             <br>
-            <label>Message:</label><br>
-            <textarea id="message" rows="20" cols="180"></textarea><br>
+            <label>Command to send:</label>
+            <br>
+            <textarea id="message" rows="20" cols="180"></textarea>
+            <br>
 			<input onclick="wsSendMessage();" value="Send" type="button">
+            <br>
+            <br>
 
             <label>Received:</label><br>
             <textarea id="echoText" rows="20" cols="180"></textarea>
