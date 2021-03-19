@@ -8,7 +8,7 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <tomcat.version>8.5.20</tomcat.version>
+        <tomcat.version>10.0.4</tomcat.version>
         <ics.jsonrpc.version>2.10.17</ics.jsonrpc.version>
         <mxe.connector.version>2.10.13</mxe.connector.version>
         <ics.commons.version>2.10.23</ics.commons.version>
